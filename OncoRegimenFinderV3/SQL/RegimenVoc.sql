@@ -5,7 +5,7 @@ select c1.concept_name as reg_name,
 from @vocaDatabaseSchema.concept_relationship 
 join @vocaDatabaseSchema.concept c1 on c1.concept_id=concept_id_1 
 join @vocaDatabaseSchema.concept c2 on c2.concept_id=concept_id_2
-		where c1.vocabulary_id='HemOnc' and relationship_id='Has antineopl Rx'
+		where relationship_id='Has antineopl Rx'
 group by c1.concept_name,c1.concept_id
 order by c1.concept_name
 ),

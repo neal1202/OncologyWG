@@ -13,6 +13,7 @@ from @cdmDatabaseSchema.drug_era de
 inner join @vocaDatabaseSchema.concept_ancestor ca on ca.descendant_concept_id = de.drug_concept_id
 inner join @vocaDatabaseSchema.concept c on c.concept_id = ca.ancestor_concept_id
     where c.concept_id in (
+    --
           select descendant_concept_id as drug_concept_id from @vocaDatabaseSchema.concept_ancestor ca1
           where ancestor_concept_id in (
 										SELECT distinct c1.concept_id
@@ -29,6 +30,7 @@ inner join @vocaDatabaseSchema.concept c on c.concept_id = ca.ancestor_concept_i
 										)
 		  ) /* Drug concept_id  */
 )
+--
 and c.concept_class_id = 'Ingredient'
 )
 select * 

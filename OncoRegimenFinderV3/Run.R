@@ -20,3 +20,10 @@ create_regimens(connectionDetails = connectionDetails,
                date_lag_input = 30,
                regimen_repeats = 5,
                generateVocabTable = F)
+
+
+#21601387 ANTINEOPLASTIC AGENTS
+#21603746 OTHER ANTINEOPLASTIC AGENTS	
+#21603783 Other antineoplastic agents
+#35807241 Chemotherapy protective agent
+#35807271 Chemotherapy protective agent

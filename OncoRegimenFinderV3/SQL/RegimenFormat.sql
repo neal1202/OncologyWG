@@ -2,7 +2,7 @@ drop table if exists  @writeDatabaseSchema.@regimenIngredientTable;
 
 with cte as (
 select r.person_id, r.ingredient_start_date as regimen_start_date,
-       LISTAGG(DISTINCT lower(r.concept_name), ',') WITHIN GROUP (ORDER BY lower(r.concept_name)) as regimen
+       string_agg(distinct lower(r.concept_name), ','   order by lower(r.concept_name) ) as regimen
 from @writeDatabaseSchema.@regimenTable r
 group by r.person_id, r.ingredient_start_date
 )

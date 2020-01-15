@@ -11,6 +11,7 @@ connectionDetails <-  DatabaseConnector::createConnectionDetails(dbms = "redshif
 create_regimens(connectionDetails = connectionDetails,
                cdmDatabaseSchema = "full_201904_omop_v5",
                writeDatabaseSchema = "study_reference",
+               vocaDatabaseSchema = "vocaDatabaseSchema",
                cohortTable = "hms_cancer_cohort",
                regimenTable = "hms_cancer_regimens",
                regimenIngredientTable = "hms_cancer_regimen_ingredients",
